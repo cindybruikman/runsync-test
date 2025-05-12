@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# RunSync Test
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Strava API](https://img.shields.io/badge/API-Strava-orange?style=for-the-badge&logo=strava&logoColor=white)
+![Vercel](https://img.shields.io/badge/Hosted_on-Vercel-000?style=for-the-badge&logo=vercel&logoColor=white)
 
-First, run the development server:
+---
+
+## 📘 Overview
+
+This is a small test project created to explore the integration of the **Strava API** within a modern web framework. The primary goal was to learn how to authenticate users via OAuth2, fetch activity data, and render that data in a clean, responsive front-end.
+
+---
+
+## 🔑 What was tested
+
+- ✅ Connecting to Strava via OAuth2 authentication
+- ✅ Handling access tokens and scopes
+- ✅ Fetching recent activities
+- ✅ Debugging common Next.js + API issues (routing, dependencies)
+
+---
+
+## 💡 Technologies Used
+
+- **Next.js (App Router)**
+- **React**
+- **Tailwind CSS**
+- **Strava API**
+- **Axios**
+- **Vercel (deployment)**
+
+---
+
+## ⚙️ Installation
+
+### Prerequisites
+
+- Node.js (LTS)
+- NPM
+- A registered Strava Developer App
+- `.env.local` file with your credentials
+
+### Setup
 
 ```bash
+git clone https://github.com/cindybruikman/runsync-test.git
+cd runsync-test
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔐 Environment Variables
 
-## Learn More
+In your `.env.local`:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+STRAVA_CLIENT_ID=your_client_id
+STRAVA_CLIENT_SECRET=your_client_secret
+NEXT_PUBLIC_STRAVA_REDIRECT_URI=http://localhost:3000/auth/callback
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠 Troubleshooting
 
-## Deploy on Vercel
+### Common issues I resolved:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **404 after login**  
+  → Fixed by switching to App Router structure in Next.js 13+
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Module not found: 'axios'**  
+  → Solved with `npm install axios`
+
+---
+
+## 🎓 What I Learned
+
+This test taught me how to:
+- Work with OAuth2
+- Connect with external APIs securely
+- Debug routing and library errors in Next.js
+- Render API-driven data from Strava
+
+---
+
+## 📄 License
+
+MIT
