@@ -25,7 +25,6 @@ This is a small test project created to explore the integration of the **Strava 
 
 - **Next.js (App Router)**
 - **React**
-- **Tailwind CSS**
 - **Strava API**
 - **Axios**
 - **Vercel (deployment)**
